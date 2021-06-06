@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="./../images/logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waiting....</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<!-- QR -->
+<div class="qr" style="display: none;">
+	<input type="text" id="username" placeholder="Enter Here" >
+	<button id="downloadqr">gen</button>
+</div>
+	<!-- QR -->
+	<a href="./../join/" style="display: none;" id="rediracttojoin">hh</a>
+	<a href="./../started/receive/" id="rereceive" style="display: none;">RECEVE</a>
+	<input type="text" id="gogo" readonly style="opacity: 0; height: 0;">
+	<div class="div-container">
+		<div class="left">
+			<p id="main">waiting for someone to join <img src="./../images/uploadinggif.gif" width="10%" alt="" srcset=""><br>ID:-</p>
+			<p id="create_con_id">12345</p>
+			<canvas id="qr-code"></canvas><br><br>
+			<div class="btn-group">
+				<button type="button" style="outline: none;"  class="btn btn-primary" onclick="document.getElementById('downloadqr').click()">Download QR</button>
+				<button type="button" style="outline: none;"  class="btn btn-primary" onclick="copylink()">Copy link</button>
+				<button type="button" style="outline: none;"  class="btn btn-primary" onclick="sharelinkfun()">Share</button>
+			  </div>
+		</div>
+		<div class="right">
+			<img src="./../images/for-create.png" alt="img" width="auto" id="sideimg">
+		</div>
+	</div>
+
+</body>
+	<!-- ------------------------FIRBASE LIBRARIES------------------------------------------------->
+	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+	<script src="./../../InitializeFirebase.js"></script>
+    <script src="./createcon.js"></script>
+    <script src="./forqr.js"></script>
+    <script src="./CopyAndShare.js"></script>
+
+
+	<!-- ------------------------FIRBASE LIBRARIES END------------------------------------------------->
+</html>

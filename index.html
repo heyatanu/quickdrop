@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>QuickDrop</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="./logo.ico">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./preloader.css"> 
+	<script src="./jquery.js"></script>
+	<script src="./preloader.js"></script>
+</head>
+
+<body style="overflow-x: hidden;">	
+	 <div class="se-pre-con"></div>					
+	<div class="bgimg-1">
+		<div class="caption" id="main-for-br">
+		  <span class="border">QUICKSHARE</span><br>
+		  <span class="border">CREATED BY ATANU</span>
+		</div>
+	  </div>
+
+
+		<!-- <a href="./connection/create/">SENT</a>
+		<a href="./connection/join/">RECEVE</a> -->
+
+	<div class="main-div">
+		
+			<a href="./connection/create/" class="sent-div" style="text-decoration: none;"><div>
+				<img src="./sent.png" class="img-sent-rev" alt="sent" >
+				<h3 class="text-sent-rev">SENT files</h3>
+				<p class="text-sent-rev-p">the sender will create a server and share the id with receiver</p>
+			</div></a>
+			<a href="./connection/join/" class="receive-div" style="text-decoration: none;"><div >
+				<img src="./receive.png" class="img-sent-rev" alt="sent" >
+				<h3 class="text-sent-rev">receive files</h3>
+				<p class="text-sent-rev-p">recevier join the sender server with the id</p>
+
+			</div></a>
+	</div>
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- ------------------------FIRBASE LIBRARIES------------------------------------------------->
+	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+	<script src="./InitializeFirebase.js"></script>
+	<script>
+		console.log(screen.width)
+		if (screen.width<550){
+			document.getElementById("main-for-br").innerHTML=`
+			<span class="border">QUICKSHARE</span><br><br>
+		  <span class="border">CREATED BY ATANU</span>
+			`;
+		}
+		setTimeout(function(){console.clear();}, 5000);
+	</script>
+	<!-- ------------------------FIRBASE LIBRARIES END------------------------------------------------->
+</body>
+
+</html>
+

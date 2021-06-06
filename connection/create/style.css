@@ -1,0 +1,51 @@
+body{
+    overflow: hidden;
+}
+.div-container{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+}
+.left,.right{
+    height: 100vh;
+    /* border: 1px solid; */
+}
+.left{
+    padding: 50px;
+    padding-top: 0px;
+}
+#main{
+    font-size: 4rem;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#create_con_id{
+    font-size: 7rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+    body{
+        overflow-y: scroll;
+    }
+    #sideimg{
+        width: 80%;
+    }
+}
+
+@media (max-width: 900px) {
+    #sideimg{
+        width: 50%;
+    }
+    #main{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .right{
+        display: none;
+    }
+}

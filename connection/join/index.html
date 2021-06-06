@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="./../images/logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="./../started/sent/" id="resent" style="display: none;"></a>
+    <!-- <input type="text" id="user_in_id">
+    <button id="user_join_btn">SOM</button> -->
+
+    <div id="checking_overlay">
+        <h2 id="checkingsts">wait let us check</h2>
+        <img src="./../images/search.gif" alt="load" width="auto" style="display: block;margin-left: auto; margin-right: auto;margin-bottom: 4rem;">
+    </div>
+    </div>
+    
+    
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+            <h2 id="question">you are going to conneted via network</h2>
+        <h2 id="status">enter the id for connect</h2>
+            <input type="number" id="user_in_id" placeholder="Enter your ID ">
+        </div>
+        <button class="btns" id="user_join_btn">Connect To This ID </button>
+        
+    
+    </div>
+    
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script src="./../../InitializeFirebase.js"></script>
+<script src="./joincon.js"></script>
+<script src="./joinconfromurl.js"></script>
+</html>
