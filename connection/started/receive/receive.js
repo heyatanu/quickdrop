@@ -73,7 +73,7 @@ remyVar =setInterval(function(){
                         fileQ=fileQ+`
                         <div class="chat-container darker">
                         <img src="./../../images/file.png" alt="file" style="width:100%;">
-                        <p><strong>GotIT!</strong> You file `+filearray[i]+` ready for download  <a href="`+fileurlarray[i]+`" class="alert-link">DOWNLOAD</a>.</p>
+                        <p><strong>GotIT!</strong> You file `+filearray[i]+` ready for download  <a href="`+fileurlarray[i]+`" target="_blank" class="alert-link">DOWNLOAD</a>.</p>
                         <span class="time-right">`+d.getHours()+`:`+d.getMinutes()+`:`+d.getSeconds()+`</span>
                       </div>
                         `;
