@@ -91,7 +91,7 @@ remyVar =setInterval(function(){
             }
         }
     });
- }, 1000);
+ }, 5000);
 
 
  window.onbeforeunload = function () {
