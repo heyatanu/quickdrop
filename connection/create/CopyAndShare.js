@@ -8,12 +8,16 @@ function copylink(){
 }
 let mainurltohome=document.getElementById("rediracttomain").href;
 
-let sharetext=`Hey, to join with me in QuickDrop, click this link: `+crurl+`     > To join by ID instead, click this link: ` +mainjoin +` and enter this ID: `+randomid+`    >Want to try QuickDrop click this link: `+mainurltohome;
+// let sharetext=`Hey, to join with me in QuickDrop, click this link: `+crurl+`     > To join by ID instead, click this link: `
+//  +mainjoin +` and enter this ID: `+randomid+`    >Want to try QuickDrop click this link: `+mainurltohome;
+
+ 
+let sharetext=`To join with me in QuickDrop, ID:- `+randomid+` click this link: `
 
 function sharelinkfun(){
     if (navigator.share) {
         navigator.share({
-            title: 'QuickDrop Share',
+            title: 'QuickDrop',
                 text:sharetext,
                 url: crurl
             }).then(() => {
