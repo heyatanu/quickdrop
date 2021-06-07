@@ -1,5 +1,6 @@
 let genqr=document.getElementById("genqr");
 let crurl=document.getElementById("rediracttojoin").href;
+let mainjoin=crurl;
 crurl=crurl+"?id="+document.getElementById("username").value;
 var qr;
 (function() {
