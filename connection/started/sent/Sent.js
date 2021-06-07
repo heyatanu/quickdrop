@@ -110,6 +110,6 @@ window.onbeforeunload = function () {
 
 setTimeout(function(){console.clear();}, 5000);
 
-window.addEventListener("beforeunload", function (e) {
-        firebase.database().ref('session/' + id).remove();
-});
+// window.addEventListener("beforeunload", function (e) {
+//         firebase.database().ref('session/' + id).remove();
+// });
