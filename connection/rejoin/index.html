@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <title>Checking....</title>
+	<link rel="icon" href="./../images/logo.ico">
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('./../images/re-bg.png');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+a{
+    text-decoration: none;
+    color: rgb(152, 152, 152);
+}
+
+#checking_overlay{
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff; /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    padding: 20px;
+    padding-top: 6rem;
+    overflow: hidden;
+}
+h2 {
+    padding: 0.8rem;
+    text-align: center;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-size: 2.5rem!important;
+    font-weight: 550;
+
+}
+</style>
+<body>
+    <div id="checking_overlay">
+        <h2 id="checkingstsre">wait we are checking</h2>
+        <img src="./../images/search.gif" alt="load" width="auto" style="display: block;margin-left: auto; margin-right: auto;margin-bottom: 4rem;">
+    </div>
+    </div>
+    <a href="./../../../" id="homepagemain" style="display: none;">HOMEPAGE</a>
+<div class="bgimg">
+  <div class="topleft">
+    <p id="main-sts" style="text-transform: capitalize;">Rejoin The Connection</p>
+  </div>
+  <div class="middle">
+    <h1><a href="./../started/sent/" target="about:blank" rel="noreferrer noopener" id="re-sent">SENT</a></h1>
+    <hr>
+    <h1><a href="./../started/receive/" target="about:blank" rel="noreferrer noopener" id="re-receive">RECEIVE</a></h1>
+  </div>
+  <div class="bottomleft">
+    <!-- <p>Some text</p> -->
+  </div>
+</div>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script src="./../../InitializeFirebase.js"></script>
+<script src="./rejoin.js"></script>
+</html>

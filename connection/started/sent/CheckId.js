@@ -5,7 +5,6 @@ let checking_overlay=document.getElementById("checking_overlay");
 let checkingsts=document.getElementById("checkingsts");
 if (id==""||id==null){
     checkingsts.innerHTML="id not found rediracting to homepage";
-    
     setTimeout(function(){document.getElementById("homepage").click();},3000);
 
 }
