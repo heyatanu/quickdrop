@@ -15,7 +15,7 @@ let rejoinmainhref=rejoinmain.href+"?id="+randomid;
  
 let sharetext=`To join with me in QuickDrop, With ID:- `+randomid+` or click this link to join: `
 
-let sharetextlater=`To join with me in QuickDrop later, With ID:- `+randomid+` or click this link to join later or rejoin: `
+let sharetextlater=`To rejoin with me in QuickDrop later, With ID:- `+randomid+` or click this link to join later or rejoin: `
 
 function sharelinkfun(){
     if (navigator.share) {
