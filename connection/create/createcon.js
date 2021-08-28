@@ -10,7 +10,9 @@ firebase.database().ref('session/' + randomid).set({
     SendingFile: false,
     Message: "",
     FileUrl:"",
-    FileName:""
+    FileName:"",
+    reverse:false,
+    accpectreverse:false,
 });
 
 myVar =setInterval(function(){ 

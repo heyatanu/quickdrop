@@ -97,3 +97,30 @@ remyVar =setInterval(function(){
  window.onbeforeunload = function () {
     return 'Are you really want to perform the action?';
 }
+
+document.getElementById("reverse-connection").addEventListener("click",function(){
+    firebase.database().ref('session/' + id_new).update({
+        reverse:true
+    });
+    var accpectreversevar;
+    var closethisint=setInterval(function(){
+        firebase.database().ref('session/' + id_new).on('value', function(snapshot) {
+            if (snapshot.val() != null ) {
+                accpectreversevar=snapshot.val().accpectreverse;
+            }
+        });
+        if (accpectreversevar){
+            clearInterval(closethisint);
+            // alert("Reverse request accpected")
+            location.replace(document.getElementById("homepage").href+"connection/started/sent/?id="+id_new);
+        }
+        
+    }, 1000);
+
+
+});
+
+firebase.database().ref('session/' + id_new).update({
+    accpectreverse:false,
+    reverse:false
+});

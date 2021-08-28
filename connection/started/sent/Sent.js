@@ -107,9 +107,41 @@ document.getElementById("file_btn_upload").onclick = function() {
 window.onbeforeunload = function () {
     return 'Are you really want to perform the action?';
 }
+var startrevcon=false;
+var stopnterv=setInterval(function(){console.clear();
+    firebase.database().ref('session/' + id).on('value', function(snapshot) {
+        if (snapshot.val() != null ) {
+            startrevcon=snapshot.val().reverse;
+        }
+    });
 
-setTimeout(function(){console.clear();}, 5000);
+    if(startrevcon){
+        clearInterval(stopnterv);
+        var r = confirm("Request for reverse connection !! Confirm?");
+        startrevcon=false;
+        if(r){
+            firebase.database().ref('session/' + id).update({
+                accpectreverse:true
+            });
+            location.replace(document.getElementById("homepage").href+"connection/started/receive/?id="+id);
+        }
+        else{
+            firebase.database().ref('session/' + id).update({
+                accpectreverse:false,
+                reverse:false
+            });
+        }
+    }
+    else{
+        // alert("NO")
+    }
+}, 1000);
 
 // window.addEventListener("beforeunload", function (e) {
 //         firebase.database().ref('session/' + id).remove();
 // });
+
+firebase.database().ref('session/' + id).update({
+    accpectreverse:false,
+    reverse:false
+});
