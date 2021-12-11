@@ -65,7 +65,10 @@ document.getElementById("file_btn_upload").onclick = function() {
     uploading_overlay.style.display="block";
     firebase.database().ref('session/').once('value', function(snapshot) {
         filename=filename+files[0].name+"|~|";
-        var uploadTask = firebase.storage().ref('Files/' + id).put(files[0]);
+        let extention = files[0].name.split('.').pop();
+        let filenameforsv=files[0].name.split(".")[0];
+        let filesavename=filenameforsv+"-"+id+"."+extention;
+        var uploadTask = firebase.storage().ref('Files/' + filesavename).put(files[0]);
         uploadTask.on('state_changed', function(snapshot) {
                 var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 progress = parseInt(progress)
@@ -75,7 +78,7 @@ document.getElementById("file_btn_upload").onclick = function() {
             },
     
             function(error) {
-                //   alert("ERROR IN SAVING IMAGE");
+                //   alert("ERROR IN SAVING IMAGE,");
             },
     
             function() {
@@ -108,7 +111,8 @@ window.onbeforeunload = function () {
     return 'Are you really want to perform the action?';
 }
 var startrevcon=false;
-var stopnterv=setInterval(function(){console.clear();
+var stopnterv=setInterval(function(){
+    console.clear();
     firebase.database().ref('session/' + id).on('value', function(snapshot) {
         if (snapshot.val() != null ) {
             startrevcon=snapshot.val().reverse;
