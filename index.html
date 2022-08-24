@@ -28,7 +28,7 @@
 
 <div id="for_rejoinif_div" style="display: flex; justify-content: flex-start; margin-left: 70px; color: black; padding: 10px;">
 	<h4 style="margin-right: 70px;">Alredy have a ID Join here</h4>
-	<input type="number" id="for_rejoinif_input" style="margin-right: 20px;">
+	<input type="number" id="for_rejoinif_input" style="margin-right: 20px;" placeholder="Enter the ID here">
 	<button class="btn btn-primary" onclick="clcicktocheckrejoin()">JOIN</button>
 </div>
 	<div class="main-div" style="overflow: hidden;">
@@ -78,7 +78,6 @@
 			else{
 				let mhref=(document.getElementById("exHomePa").href)
 				mhref=mhref+"connection/rejoin/?id="+vd
-				alert(mhref)
 				document.getElementById("exHomePa").href=mhref
 				document.getElementById("exHomePa").click()
 
