@@ -4,6 +4,7 @@ body, html {
     font: 400 15px/1.8 "Lato", sans-serif;
     color: rgba(159, 159, 159, 0.059);
     text-decoration: none!important;
+    overflow: hidden!important;
   }
   
   .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -16,7 +17,7 @@ body, html {
   }
   .bgimg-1 {
     background-image: url("./bg.jpg");
-    height: 50%;
+    height: 45%;
     /* background-attachment: scroll; */
   }
   
@@ -91,10 +92,22 @@ body, html {
        width: 10%;
 }
 
+@media (max-width: 650px){
+
+  #for_rejoinif_div{
+    display: block!important;
+  }
+
+}
+
 @media (max-width: 550px){
   .caption span.border {
     font-size: 18px;
   }
+  #for_rejoinif_div{
+    display: none;
+  }
+
 }
 @media (max-width: 380px){
   .caption span.border {

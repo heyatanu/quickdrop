@@ -4,7 +4,7 @@ user_join_btn.onclick = function() {
     if (user_in_id!=""){
             // console.log("WAIT CHECKING")
     firebase.database().ref('session/' + user_in_id).on('value', function(snapshot) {
-        if (snapshot.val().Id == user_in_id ) {
+        if (snapshot.exists() && snapshot.val().Id == user_in_id ) {
             firebase.database().ref('session/' + user_in_id).update({
                 ConnectionStarted:true
             });    
