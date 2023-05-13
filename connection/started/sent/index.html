@@ -43,6 +43,26 @@
     <button class="btns" id="message_btn">sent this message</button>
     <button class="btns" id="file_btn">select file</button>
     <button class="btns" id="file_btn_upload" disabled style="cursor: not-allowed;">uplode file</button>
+    <button type="button" class="btns" id="forRevveseModelBtn" data-toggle="modal" data-target="#forRevveseModel" style="display: none;">Open Modal</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="forRevveseModel" data-keyboard="false" data-backdrop="static" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>Request for reverse connection !! Confirm?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="reverseingTheCon()">Yes! reverse the connection </button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="reverseSetF()">Cancel It</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <!-- Modal -->
     
 
 </div>

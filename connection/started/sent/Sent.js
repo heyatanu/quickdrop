@@ -112,6 +112,7 @@ window.onbeforeunload = function () {
 }
 var startrevcon=false;
 var stopnterv=setInterval(function(){
+    var startOnce=true;
     console.clear();
     firebase.database().ref('session/' + id).on('value', function(snapshot) {
         if (snapshot.val() != null ) {
@@ -120,21 +121,8 @@ var stopnterv=setInterval(function(){
     });
 
     if(startrevcon){
-        clearInterval(stopnterv);
-        var r = confirm("Request for reverse connection !! Confirm?");
-        startrevcon=false;
-        if(r){
-            firebase.database().ref('session/' + id).update({
-                accpectreverse:true
-            });
-            location.replace(document.getElementById("homepage").href+"connection/started/receive/?id="+id);
-        }
-        else{
-            firebase.database().ref('session/' + id).update({
-                accpectreverse:false,
-                reverse:false
-            });
-        }
+            document.getElementById("forRevveseModelBtn").click()
+            document.getElementById("forRevveseModelBtn").dataset.target = "#nothing";
     }
     else{
         // alert("NO")
@@ -149,3 +137,23 @@ firebase.database().ref('session/' + id).update({
     accpectreverse:false,
     reverse:false
 });
+
+function reverseSetF(){
+    document.getElementById("forRevveseModelBtn").dataset.target = "#forRevveseModel";
+
+    firebase.database().ref('session/' + id).update({
+        reverse:false,
+        accpectreverse:false,
+        reverseCancelByU:true
+    });
+}
+
+function reverseingTheCon(){
+
+    firebase.database().ref('session/' + id).update({
+        accpectreverse:true
+    });
+    location.replace(document.getElementById("homepage").href+"connection/started/receive/?id="+id);
+
+
+}

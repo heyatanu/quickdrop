@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-Down</title>
+
+</head>
+<body>
+    <h3>Download complete</h3>
+</body>
+<!-- ------------------------FIRBASE LIBRARIES------------------------------------------------->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script src="./../InitializeFirebase.js"></script>
+<script>
+    
+var url_string_new = window.location.href
+var url_new = new URL(url_string_new);
+var id_new = url_new.searchParams.get("id");
+
+if (id_new=="" || id_new==null){
+    history.back()
+}
+else{
+
+    firebase.database().ref('session/' + id_new).on('value', function(snapshot) {
+        if (snapshot.val() != null ) {
+            window.location.replace(snapshot.val().currentLink)
+        }
+    });
+    
+}
+</script>
+
+</html>

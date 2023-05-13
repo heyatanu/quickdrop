@@ -3,6 +3,8 @@ document.getElementById("username").value=randomid;
 let create_con_id=document.getElementById("create_con_id");
 var myVar;
 create_con_id.innerHTML=randomid;
+var dateobj = new Date();
+uplodedate = ((dateobj.getMonth())+1) + "/" + dateobj.getDate() + "/" + dateobj.getFullYear() ;
 
 firebase.database().ref('session/' + randomid).set({
     Id: randomid ,
@@ -13,6 +15,7 @@ firebase.database().ref('session/' + randomid).set({
     FileName:"",
     reverse:false,
     accpectreverse:false,
+    createDate:uplodedate
 });
 
 myVar =setInterval(function(){ 
@@ -31,3 +34,5 @@ myVar =setInterval(function(){
         }
     });
  }, 1000);
+
+
