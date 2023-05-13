@@ -26,7 +26,7 @@ function performOp()
                 snapshot.forEach(function(childSnapshot) {
                     if (childSnapshot.val() != null) {
                         Id = childSnapshot.val().Id;
-                    if(id!=7548 || id != '7548'){
+                    if(Id!=7548 || Id != '7548'){
                     firebase.database().ref('session/' + Id).remove();
                     }
 
