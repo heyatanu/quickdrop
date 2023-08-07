@@ -25,15 +25,21 @@
 	<input type="text" id="gogo" readonly style="opacity: 0; height: 0;">
 	<div class="div-container">
 		<div class="left">
+			<div  id="captureForimg" >
 			<p id="main">waiting for someone to join <img src="./../images/uploadinggif.gif" width="10%" alt="" srcset=""><br>ID:-</p>
 			<p id="create_con_id">12345</p>
-			<canvas id="qr-code"></canvas><br><br>
+			<canvas id="qr-code">12</canvas><br><br>
 			<p>Share the link to join or scan the QR</p>
+		</div>
+
 			<div class="btn-group">
 				<button type="button" style="outline: none;"  class="btn btn-primary" onclick="copylink()">Copy link</button>
 				<button type="button" style="outline: none;"  class="btn btn-primary" onclick="sharelinkfun()">Share Link</button>
 				<button type="button" style="outline: none;"  class="btn btn-primary" onclick="sharelinkfunrejoin()">Rejoin</button>
-				<button type="button" style="outline: none;"  class="btn btn-primary" onclick="document.getElementById('downloadqr').click()">Download QR</button>
+			<input id="btn-Preview-Image" type="button" style="outline: none;"  class="btn btn-primary" value="Download"/>
+		<button type="button" class="btns" id="forRevveseModelBtn" data-toggle="modal" data-target="#forRevveseModel" style="display: none;">Open Modal</button>
+
+				<!-- <button type="button" style="outline: none;"  class="btn btn-primary" onclick="document.getElementById('downloadqr').click()">Download QR</button> -->
 			  </div>
 		</div>
 		<div class="right">
@@ -41,8 +47,37 @@
 		</div>
 	</div>
 
+	
+
+
+
+
+
+	
+    <!-- Modal -->
+    <div class="modal fade" id="forRevveseModel" data-keyboard="false" data-backdrop="static" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+			<img src="./download.gif" alt="download" width="25%" srcset="">
+          </div>
+          <div class="modal-footer">
+			<a id="btn-Convert-Html2Image" class="btn btn-default"  href="#">Download Now</a>
+            <button type="button" class="btn btn-default" data-dismiss="modal" >Cancel It</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <!-- Modal -->
+
 </body>
 	<!-- ------------------------FIRBASE LIBRARIES------------------------------------------------->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
@@ -50,10 +85,14 @@
 	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 	<script src="./../../InitializeFirebase.js"></script>
     <script src="./createcon.js"></script>
     <script src="./forqr.js"></script>
     <script src="./CopyAndShare.js"></script>
+    <script src="./Capture.js"></script>
+	
 
 
 	<!-- ------------------------FIRBASE LIBRARIES END------------------------------------------------->

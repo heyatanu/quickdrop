@@ -19,7 +19,7 @@ firebase.database().ref('session/' + randomid).set({
 });
 
 myVar =setInterval(function(){ 
-    console.clear();
+    // console.clear();
     firebase.database().ref('session/' + randomid).on('value', function(snapshot) {
         if (snapshot.val() != null ) {
             if(snapshot.val().ConnectionStarted){

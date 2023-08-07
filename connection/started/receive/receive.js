@@ -26,7 +26,7 @@ let filearray=[];
 let fileurlarray=[];
 var d = new Date();
 let status=document.getElementById("status");
-status.innerHTML="you are connected to "+id_new+" via network"
+status.innerHTML=`you are connected to `+id_new+`<img src="./../../images/verify.png" alt="text" style="width:2%;"> via network <img src="./../../images/shield.png" alt="text" style="width:2%;">`
 remyVar =setInterval(function(){ 
     console.clear();
     b=false;
@@ -53,7 +53,7 @@ remyVar =setInterval(function(){
                     for (var i=1;i<msgarray.length;i++){
                         msgQ=msgQ+`
                         <div class="chat-container">
-                    <img src="./../../images/text.png" alt="text" style="width:100%;">
+                    <img src="./../../images/text.png" alt="text" style="width:70%;">
                     <p>`+msgarray[i]+`</p>
                     <span class="time-right">`+d.getHours()+`:`+d.getMinutes()+`:`+d.getSeconds()+`</span>
                     <button value="`+msgarray[i]+`" onclick="copyText(this.value)" >Copy</button>
@@ -68,10 +68,10 @@ remyVar =setInterval(function(){
                     for (var i=1;i<filearray.length;i++){
                         fileQ=fileQ+`
                         <div class="chat-container darker">
-                        <img src="./../../images/file.png" alt="file" style="width:100%;">
+                        <img src="./../../images/file.png" alt="file" style="width:70%;">
                         <p><strong>GotIT!</strong> You file `+filearray[i]+` ready for download  <a href="`+fileurlarray[i]+`" target="about:blank" rel="noreferrer noopener" class="alert-link">DOWNLOAD</a>.</p>
                         <span class="time-right">`+d.getHours()+`:`+d.getMinutes()+`:`+d.getSeconds()+`</span>
-                        <button value="`+fileurlarray[i]+`" onclick="copyFileLink(this.value)">Copy</button>
+                        <button value="`+fileurlarray[i]+`" onclick="copyFileLink(this.value)">Copy Link</button>
                         <button value="`+fileurlarray[i]+`" onclick="shareFileLinkNew(this.value)">Share</button>
                       </div>
                         `;
@@ -142,7 +142,7 @@ function copyText(e){
     navigator.clipboard.writeText(copyText.value);
 
     // Alert the copied text
-    alert("Copied");
+    document.getElementById("forRevveseModelBtn").click()
 }
 function shareText(e){
     if (navigator.share) {
@@ -162,7 +162,7 @@ function shareText(e){
 
 function createShortLink(){
     url=document.getElementById("homepage").href
-    url=url+"/q/?id="+id_new
+    url=url+"q/?id="+id_new
     // console.log(url)
     return url
 }
@@ -175,7 +175,8 @@ function shareFileLink(e){
 
 
 function copyFileLink(e){
-    shareFileLink(e)
+    // shareFileLink(e)
+    
     copyText(createShortLink())
 }
 

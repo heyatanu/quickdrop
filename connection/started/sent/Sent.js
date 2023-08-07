@@ -6,7 +6,7 @@ let mainprogress=document.getElementById("mainprogress");
 let uploading_overlay=document.getElementById("uploading_overlay");
 let uploadingsts=document.getElementById("uploadingsts");
 
-document.getElementById("question").innerHTML="you are connected to "+id+" via network"
+document.getElementById("question").innerHTML=`you are connected to `+id+`<img src="./../../images/verify.png" alt="text" style="width:4%;"> via network <img src="./../../images/shield.png" alt="text" style="width:3%;">`
 
 let msg="";
 let filename="";

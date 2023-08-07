@@ -90,8 +90,8 @@
 <a href="./../../../" id="homepage" style="display: none;">HOMEPAGE</a>
 <input type="text" id="forCopyInput"  style="display: none;">
     <div class="container">
-        <div class="well well-sm text-center" style="margin-top: 10px;text-align: center; font-weight: 550; letter-spacing: 3px; word-spacing: 2px; text-transform: uppercase;" id="status">status</div>
-        <button class="btn btn-block btn-danger" id="reverse-connection" style="margin-bottom: 10px;">Request for Reverse Connection(BETA)</button>
+        <div class="well well-sm text-center" style="margin-top: 10px;text-align: center; font-weight: 550; letter-spacing: 3px; word-spacing: 2px; text-transform: uppercase;" id="status">statuss</div>
+        <button class="btn btn-block btn-danger" id="reverse-connection" style="margin-bottom: 10px;">Request for Reverse Connection</button>
         <div class="row">
             <div class="col-lg-6 col-md-6 col-12" style="border-right: 1px dashed black;">
                 <div class="well well-sm text-center" style="text-align: center; font-weight: 500; letter-spacing: 3px; word-spacing: 2px; text-transform: uppercase;">text will appare here down below</div>
@@ -104,6 +104,26 @@
             </div>
         </div>
     </div>
+
+    <button type="button" class="btns" id="forRevveseModelBtn" data-toggle="modal" data-target="#forRevveseModel" style="display: none;">Open Modal</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="forRevveseModel" data-keyboard="false" data-backdrop="static" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-body">
+                <p>Copied..!</p>
+              </div>
+              <div class="modal-footer">
+                 <button type="button" class="btn btn-default" data-dismiss="modal" onclick="reverseSetF()">CLose</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- Modal -->
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
